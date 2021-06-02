@@ -10,7 +10,7 @@
 # the area, then prints it to the user
 def calc_area(length, height):
     area = length * height / 2
-    print("The area is {:.2f}".format(area))
+    print("The area is {:.2f}units^2".format(area))
 
 
 def main():
@@ -29,10 +29,12 @@ def main():
             calc_area(user_length, user_height)
         else:
             print("Numbers must be positive")
+            main()
 
     # if there is an error converting the users input
     except ValueError:
         print("Not valid input")
+        main()
 
 
 if __name__ == "__main__":
